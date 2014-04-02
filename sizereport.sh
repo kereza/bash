@@ -30,7 +30,10 @@ do
 	fi
 done
 
-mail -s "large databases" kereza85@gmail.com < /var/lib/mysql/last.txt
-mail -s "large accounts" kereza85@gmail.com < /home/last.txt
+cat /home/last.txt | sort > /home/final.txt
+cat /var/lib/mysql/last.txt | sort > /var/lib/mysql/final.txt
 
-rm -rf /home/last.txt /home/accounts.txt /home/size.txt /var/lib/mysql/databases.txt /var/lib/mysql/size2.txt /var/lib/mysql/last.txt
+mail -s "large databases" kereza85@gmail.com < /var/lib/mysql/final.txt
+mail -s "large accounts" kereza85@gmail.com < home/final.txt
+
+rm -rf /home/last.txt /home/accounts.txt /home/size.txt /var/lib/mysql/databases.txt /var/lib/mysql/size2.txt /var/lib/mysql/last.txt /home/final.txt /var/lib/mysql/final.txt
