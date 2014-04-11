@@ -1,5 +1,11 @@
 #! /bin/bash
 
+
+"
+Changing the passwords on all email accounts on a cPanel based server
+"
+
+
 genpasswd() {
 
         tr -dc A-Za-z0-9_ < /dev/urandom | head -c 12 | xargs
