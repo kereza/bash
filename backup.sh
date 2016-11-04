@@ -1,4 +1,4 @@
-#! /bin/bash
+##! /bin/bash
 
 " 
 A simple script for backing up all the /home folders and all the databases on a cPanel based server 
